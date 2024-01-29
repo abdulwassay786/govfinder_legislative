@@ -1,4 +1,4 @@
 # build_files.sh
 pip install -r requirements.txt
-python manage.py migrate
+source venv/bin/activate
 python manage.py collectstatic
