@@ -71,6 +71,7 @@ def data_json(request):
                     'name': item.member.name,
                     'state': item.member.state,
                     'party': item.member.party,
+                    'img_name':item.member.image_name,
                 }
 
             # Committee

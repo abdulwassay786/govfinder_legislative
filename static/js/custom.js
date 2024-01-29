@@ -437,6 +437,14 @@ function LegislativeDataTable() {
             { data: 'id',  title: 'ID' },
             {
                 data: 'member',
+                title: 'Image',
+                render: function (data, type, row) {
+                    const imageUrl = `https://gov-finder.s3.amazonaws.com/images/${data.image_name.replace(/\.(png|jpg|webp)$/, '')}.png`;
+                    return `<img style="width:80px;" src="${imageUrl}" onerror="this.src='${placeholderImg}'"  />`;
+                }
+            },
+            {
+                data: 'member',
                 title: 'Name',
                 render: function (data, type, row) {
                     return data ? data.name : ''; // Safely access the member's name if the member data exists
